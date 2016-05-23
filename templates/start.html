@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API sample</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi :)</h1>
+        <section>
+            <h2>Vreme v kraju {{ vreme.name }}</h2>
+            <p>Opis: {{ vreme.weather[0].description }}</p>
+            <p>Trenutna temperatura: {{ vreme.main.temp }} stopinj C</p>
+        </section>
+        <section>
+            {% for oseba in seznam %}
+                <p>{{ oseba.first_name }} {{ oseba.last_name }}, {{ oseba.SSN }}</p>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>
